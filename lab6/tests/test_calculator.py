@@ -1,6 +1,10 @@
 import pytest
+import os
+import sys
 
-from module.calculator import Calculator
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from calculator import Calculator
 
 calc = Calculator()
 
