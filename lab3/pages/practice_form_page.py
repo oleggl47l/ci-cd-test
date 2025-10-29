@@ -1,3 +1,5 @@
+from selenium.webdriver.support import expected_conditions as EC
+
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
@@ -28,3 +30,9 @@ class PracticeFormPage(BasePage):
 
     def get_modal_title(self):
         return self.get_text(self.MODAL_TITLE)
+
+    def get_modal_title(self):
+        return self.wait.until(
+            EC.visibility_of_element_located(self.MODAL_TITLE)
+        ).text
+
