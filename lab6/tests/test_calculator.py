@@ -1,6 +1,6 @@
 import pytest
 
-from calculator import Calculator
+from module.calculator import Calculator
 
 calc = Calculator()
 
